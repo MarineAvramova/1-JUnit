@@ -7,15 +7,6 @@ import org.junit.jupiter.api.Test;
 
 class MonthListTest {
 
-	@BeforeEach
-	void setUp() throws Exception {
-		System.out.println("setting up...");
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
 	@Test
 	void testArrayListShouldHave11positions() {
 		MonthList list = new MonthList("MonthList");
@@ -26,7 +17,7 @@ class MonthListTest {
 	@Test
 	void testArrayListShouldNotHaveNull() {
 		MonthList list = new MonthList("MonthList");
-		list.addMonth();
+		
 		for(String month : list.getMonths()) {
 			assertFalse(month == null);
 		}
@@ -37,8 +28,8 @@ class MonthListTest {
 		MonthList list = new MonthList("MonthList");
 		list.addMonth();
 		System.out.println(list.getMonths());
-		//for(String month : list.getMonths()) {
+		
 		assertEquals("August", list.getMonths().get(7), "August is in index 7");
-		//}
+		
 	}
 }
